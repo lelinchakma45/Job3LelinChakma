@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405614533883",
+    "project_id": "job3lelinchakma",
+    "storage_bucket": "job3lelinchakma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405614533883:android:e14100e0a89ee48085a45e",
+        "android_client_info": {
+          "package_name": "com.example.job3lelinchakma"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPMC-WIocsKQ59ndcfXt9P_mMj8Zztd_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
