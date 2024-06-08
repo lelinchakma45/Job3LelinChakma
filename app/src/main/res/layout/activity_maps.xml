@@ -96,6 +96,6 @@
         app:behavior_peekHeight="550dp"
         app:behavior_saveFlags="all"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-        <include layout="@layout/note_show"/>
+        <include layout="@layout/maps_show"/>
     </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

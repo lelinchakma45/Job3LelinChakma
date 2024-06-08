@@ -29,10 +29,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val radioButton = findViewById<RadioButton>(R.id.customRadioButton)
-        val imageView = radioButton.findViewById<ImageView>(R.id.image)
-        imageView.setImageResource(R.drawable.location)
-
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -66,7 +62,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+        binding.standardBottomSheet.findViewById<RadioButton>(R.id.satelliteBtn).setOnCheckedChangeListener{ buttonView, isChecked ->
+            if (isChecked) {
+                mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+            }
+            else{
+                mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+            }
+        }
+
 
         firestoreViewModel.getAllUsers { userList ->
             for (user in userList) {
